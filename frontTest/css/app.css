@@ -1,0 +1,30 @@
+/* 상단 header */
+.header{}
+.nav{}
+#logo{}
+.menu{}
+.menu-item{}
+
+/* 중앙 content */
+.content{}
+
+  /* 중앙 Left content */
+.content-left{}
+.content-left-profile{}
+.content-left-poll-btn{}
+#btn-makepoll{}
+.content-left-poll{}
+.poll-title{}
+.poll-question{}
+.poll-answer{}
+.poll-btn{}
+.button{}
+.btn-primary{}
+.poll-date{}
+
+  /* 중앙 Section content */
+.content-section{}
+.contetn-section-article{}
+
+/* 하단 footer */
+.footer{}
