@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SSAFY BOOK CAFE</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous" />
+  </head>
+
+  <body>
+    <!-- 상단 nav bar start -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
+      <div class="container">
+        <a class="navbar-brand text-primary" href="#">
+          <img src="./assets/img/ssafy_logo.png" alt="" width="40" height="30" />
+          SSAFY Book Cafe
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">공지사항</a>
+            </li>
+          </ul>
+          <!-- 로그인 전 -->
+          <ul class="navbar-nav me-5 mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">회원가입</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">로그인</a>
+            </li>
+          </ul>
+          <!-- 로그인 후 -->
+          <ul class="navbar-nav me-5 mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">로그아웃</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">마이페이지</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false">
+                관리자
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li>
+                  <a class="dropdown-item" href="#pollModal"
+                    ><!-- Button trigger modal -->
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#pollModal">
+                      Launch demo modal
+                    </button></a
+                  >
+                </li>
+                <li><a class="dropdown-item" href="#">차트보기</a></li>
+                <li><a class="dropdown-item" href="#">회원관리</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- 상단 nav bar end -->
+
+    <!-- 중앙 content start -->
+    <div class="container">
+      <div style="height: 80px"></div>
+      <div class="row">
+        <!-- 중앙 left-content start -->
+        <div class="col-md-3">
+          <!-- profile start -->
+          <div class="text-center m-2">
+            <img src="./assets/img/profile.png" class="img-thumbnail" alt="..." />
+          </div>
+          <!-- profile end -->
+          <!-- 지역 menu bar start -->
+          <div class="accordion" id="areas">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="seoul">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#area-seoul"
+                  aria-expanded="true"
+                  aria-controls="area-seoul">
+                  서울
+                </button>
+              </h2>
+              <div
+                id="area-seoul"
+                class="accordion-collapse collapse show"
+                aria-labelledby="seoul"
+                data-bs-parent="#areas">
+                <div class="accordion-body">역삼점</div>
+                <div class="accordion-body">선릉점</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="daejeon">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#area-daejeon"
+                  aria-expanded="true"
+                  aria-controls="area-daejeon">
+                  대전
+                </button>
+              </h2>
+              <div
+                id="area-daejeon"
+                class="accordion-collapse collapse"
+                aria-labelledby="daejeon"
+                data-bs-parent="#areas">
+                <div class="accordion-body">학하점</div>
+                <div class="accordion-body">봉명점</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="gumi">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#area-gumi"
+                  aria-expanded="true"
+                  aria-controls="area-gumi">
+                  구미
+                </button>
+              </h2>
+              <div
+                id="area-gumi"
+                class="accordion-collapse collapse"
+                aria-labelledby="gumi"
+                data-bs-parent="#areas">
+                <div class="accordion-body">구미1</div>
+                <div class="accordion-body">구미2</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="gwangju">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#area-gwangju"
+                  aria-expanded="true"
+                  aria-controls="area-gwangju">
+                  광주
+                </button>
+              </h2>
+              <div
+                id="area-gwangju"
+                class="accordion-collapse collapse"
+                aria-labelledby="gwangju"
+                data-bs-parent="#areas">
+                <div class="accordion-body">광주1</div>
+                <div class="accordion-body">광주2</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="buk">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#area-buk"
+                  aria-expanded="true"
+                  aria-controls="area-buk">
+                  부울경
+                </button>
+              </h2>
+              <div
+                id="area-buk"
+                class="accordion-collapse collapse"
+                aria-labelledby="buk"
+                data-bs-parent="#areas">
+                <div class="accordion-body">부울경1</div>
+                <div class="accordion-body">부울경2</div>
+              </div>
+            </div>
+          </div>
+          <!-- 지역 menu bar end -->
+          <!-- 설문 조사 start -->
+          <div class="border border-danger rounded mt-2 mb-2 p-3">진행중인 설문이 없습니다.</div>
+          <!-- 설문 조사 end -->
+        </div>
+        <!-- 중앙 left-content end -->
+        <!-- 중앙 right-content start -->
+        <div class="col-md-9">
+          <!-- 프로그래밍 목록 start -->
+          <div class="mt-2">
+            <h4>[ 프로그래밍 언어]</h4>
+          </div>
+          <div class="row mt-1 mx">
+            <div class="card text-center col-md-3">
+              <img
+                src="./assets/img/book/p_book01.png"
+                class="card-img-top w-75 align-self-center mt-2"
+                alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">점프 투 파이썬</h5>
+                <p class="card-text">18,800원</p>
+                <a href="#" class="bt0n btn-primary btn-sm">구매하기</a>
+              </div>
+            </div>
+            <div class="card text-center col-md-3">
+              <img
+                src="./assets/img/book/p_book02.png"
+                class="card-img-top w-75 align-self-center mt-2"
+                alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">HTML5 API 프로그래밍</h5>
+                <p class="card-text">18,800원</p>
+                <a href="#" class="btn btn-primary btn-sm">구매하기</a>
+              </div>
+            </div>
+            <div class="card text-center col-md-3">
+              <img
+                src="./assets/img/book/p_book03.png"
+                class="card-img-top w-75 align-self-center mt-2"
+                alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Vue.js 입문</h5>
+                <p class="card-text">18,800원</p>
+                <a href="#" class="btn btn-primary btn-sm">구매하기</a>
+              </div>
+            </div>
+
+            <div class="card text-center col-md-3">
+              <img
+                src="./assets/img/book/p_book04.png"
+                class="card-img-top w-75 align-self-center mt-2"
+                alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Java 프로그래밍</h5>
+                <p class="card-text">18,800원</p>
+                <a href="#" class="btn btn-primary btn-sm">구매하기</a>
+              </div>
+            </div>
+          </div>
+          <!-- 프로그래밍 목록 end -->
+          <!-- essay 목록 start -->
+          <div class="mt-2">
+            <h4>[ 에세이 ]</h4>
+          </div>
+          <div class="row mt-1">
+            <div class="card text-center col-md-3">
+              <img
+                src="./assets/img/book/e_book01.png"
+                class="card-img-top w-75 align-self-center mt-2"
+                alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">2인조</h5>
+                <p class="card-text">18,800원</p>
+                <a href="#" class="btn btn-primary btn-sm">구매하기</a>
+              </div>
+            </div>
+            <div class="card text-center col-md-3">
+              <img
+                src="./assets/img/book/e_book02.png"
+                class="card-img-top w-75 align-self-center mt-2"
+                alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">안녕 소중한 사랑</h5>
+                <p class="card-text">18,800원</p>
+                <a href="#" class="btn btn-primary btn-sm">구매하기</a>
+              </div>
+            </div>
+            <div class="card text-center col-md-3">
+              <img
+                src="./assets/img/book/e_book03.png"
+                class="card-img-top w-75 align-self-center mt-2"
+                alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">웃음</h5>
+                <p class="card-text">18,800원</p>
+                <a href="#" class="btn btn-primary btn-sm">구매하기</a>
+              </div>
+            </div>
+            <div class="card text-center col-md-3">
+              <img
+                src="./assets/img/book/e_book04.png"
+                class="card-img-top w-75 align-self-center mt-2"
+                alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">곰돌이 푸</h5>
+                <p class="card-text">18,800원</p>
+                <a href="#" class="btn btn-primary btn-sm">구매하기</a>
+              </div>
+            </div>
+          </div>
+          <!-- essay 목록 end -->
+          <!-- 게시판 start -->
+          <div class="row mt-3">
+            <div class="col-6 mt-6">
+              <h4>인기글</h4>
+              <table class="table table-hover">
+                <thead>
+                  <tr class="text-center">
+                    <th>제목</th>
+                    <th>작성자</th>
+                    <th>조회수</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>안녕!!</td>
+                    <td>박찬형</td>
+                    <td>268</td>
+                  </tr>
+                  <tr>
+                    <td>와웅!!!!</td>
+                    <td>이수민</td>
+                    <td>153</td>
+                  </tr>
+                  <tr>
+                    <td>그는 신인가?</td>
+                    <td>공예찬</td>
+                    <td>123</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="col-6 mt-6">
+              <h4>최신글</h4>
+              <table class="table table-dark table-hover">
+                <thead>
+                  <tr class="text-center">
+                    <th>제목</th>
+                    <th>작성자</th>
+                    <th>조회수</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>열심히</td>
+                    <td>Doe</td>
+                    <td>142</td>
+                  </tr>
+                  <tr>
+                    <td>하자!!</td>
+                    <td>Moe</td>
+                    <td>132</td>
+                  </tr>
+                  <tr>
+                    <td>화이팅</td>
+                    <td>Dooley</td>
+                    <td>119</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- 게시판 end -->
+        </div>
+        <!-- 중앙 right-content end -->
+      </div>
+    </div>
+    <!-- 중앙 content end -->
+
+    <!-- footer start -->
+    <footer>
+      <nav
+        class="navbar navbar-expand-lg navbar-light bg-light shadow container justify-content-end">
+        <div class="row">
+          <ul class="navbar-nav me-5 mb-2 mb-lg-0">
+            <li><a href="" class="nav-link text-secondary">카페소개</a></li>
+            <li><a href="" class="nav-link text-secondary">개인정보처리방침</a></li>
+            <li><a href="" class="nav-link text-secondary">이용약관</a></li>
+            <li><a href="" class="nav-link text-secondary">오시는길</a></li>
+            <li><label class="nav-link text-secondary">&copy; SSAFY Corp.</label></li>
+          </ul>
+        </div>
+      </nav>
+    </footer>
+    <!-- footer end -->
+    <!-- 설문조사 modal start -->
+    <!-- The Modal -->
+    <div class="modal" id="pollModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Modal Heading</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            <form action="">
+              <div class="row mb-3 mt-3">
+                <div class="col-md-6">
+                  <label for="email" class="form-label">시작일</label>
+                  <input type="date" class="form-control" id="email" name="email" />
+                </div>
+                <div class="col-md-6">
+                  <label for="email" class="form-label">종료일</label>
+                  <input type="date" class="form-control" id="email" name="email" />
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="pwd" class="form-label">질문제목</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="question"
+                  placeholder="질문제목 입력"
+                  name="question" />
+              </div>
+              <div class="mb-3">
+                <label for="pwd" class="form-label">답변항목 : </label>
+                <button type="button" class="btn btn-primary btn-sm">추가</button>
+              </div>
+              <div class="mb-3 poll-answer-list">
+                <input type="text" class="form-control-poll" />
+              </div>
+            </form>
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 설문조사 modal end -->
+
+    <!-- javaScript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+    <!-- javaScript end -->
+  </body>
+</html>
